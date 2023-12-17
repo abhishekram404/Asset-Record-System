@@ -47,7 +47,7 @@ Partial Class Form1
         Panel1.Controls.Add(UsernamePanel)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(Login)
-        Panel1.Location = New Point(229, 54)
+        Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
         Panel1.Padding = New Padding(20)
         Panel1.Size = New Size(365, 396)
@@ -162,10 +162,10 @@ Partial Class Form1
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(58), CByte(134), CByte(255))
-        ClientSize = New Size(800, 501)
+        ClientSize = New Size(390, 419)
         Controls.Add(Panel1)
         Name = "Form1"
-        Text = "Form1"
+        Text = "Login"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         PasswordPanel.ResumeLayout(False)
