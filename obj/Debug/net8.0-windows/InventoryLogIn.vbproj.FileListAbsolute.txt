@@ -1,0 +1,17 @@
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\bin\Debug\net8.0-windows\InventoryLogIn.exe
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\bin\Debug\net8.0-windows\InventoryLogIn.deps.json
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\bin\Debug\net8.0-windows\InventoryLogIn.runtimeconfig.json
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\bin\Debug\net8.0-windows\InventoryLogIn.dll
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\bin\Debug\net8.0-windows\InventoryLogIn.pdb
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.Form1.resources
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.vbproj.GenerateResource.cache
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.AssemblyInfoInputs.cache
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.AssemblyInfo.vb
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.vbproj.CoreCompileInputs.cache
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.dll
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\refint\InventoryLogIn.dll
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.pdb
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.genruntimeconfig.cache
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\ref\InventoryLogIn.dll
+C:\Users\Cyborg 001\source\repos\InventoryLogIn\obj\Debug\net8.0-windows\InventoryLogIn.Resources.resources
