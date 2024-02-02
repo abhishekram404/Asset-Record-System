@@ -24,12 +24,13 @@ Partial Class Dashboard
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         SplitContainer1 = New SplitContainer()
-        Button4 = New Button()
-        Button3 = New Button()
+        RegisterUserButton = New Button()
+        LogoutButton = New Button()
+        AccessManagementButton = New Button()
         Label3 = New Label()
-        Button2 = New Button()
+        AddNewAssetButton = New Button()
         Label2 = New Label()
-        Button1 = New Button()
+        AssignAssetButton = New Button()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         FlowLayoutPanel4 = New FlowLayoutPanel()
@@ -61,12 +62,13 @@ Partial Class Dashboard
         ' SplitContainer1.Panel1
         ' 
         SplitContainer1.Panel1.BackColor = Color.FromArgb(CByte(82), CByte(148), CByte(226))
-        SplitContainer1.Panel1.Controls.Add(Button4)
-        SplitContainer1.Panel1.Controls.Add(Button3)
+        SplitContainer1.Panel1.Controls.Add(RegisterUserButton)
+        SplitContainer1.Panel1.Controls.Add(LogoutButton)
+        SplitContainer1.Panel1.Controls.Add(AccessManagementButton)
         SplitContainer1.Panel1.Controls.Add(Label3)
-        SplitContainer1.Panel1.Controls.Add(Button2)
+        SplitContainer1.Panel1.Controls.Add(AddNewAssetButton)
         SplitContainer1.Panel1.Controls.Add(Label2)
-        SplitContainer1.Panel1.Controls.Add(Button1)
+        SplitContainer1.Panel1.Controls.Add(AssignAssetButton)
         SplitContainer1.Panel1.Controls.Add(Label1)
         SplitContainer1.Panel1.Controls.Add(PictureBox1)
         ' 
@@ -77,27 +79,38 @@ Partial Class Dashboard
         SplitContainer1.SplitterDistance = 245
         SplitContainer1.TabIndex = 1
         ' 
-        ' Button4
+        ' RegisterUserButton
         ' 
-        Button4.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        Button4.Font = New Font("Segoe UI", 12.0F)
-        Button4.Location = New Point(12, 719)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(221, 49)
-        Button4.TabIndex = 7
-        Button4.Text = "Logout"
-        Button4.UseVisualStyleBackColor = False
+        RegisterUserButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        RegisterUserButton.Font = New Font("Segoe UI", 12.0F)
+        RegisterUserButton.Location = New Point(12, 414)
+        RegisterUserButton.Name = "RegisterUserButton"
+        RegisterUserButton.Size = New Size(221, 49)
+        RegisterUserButton.TabIndex = 8
+        RegisterUserButton.Text = "Register user"
+        RegisterUserButton.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' LogoutButton
         ' 
-        Button3.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        Button3.Font = New Font("Segoe UI", 12.0F)
-        Button3.Location = New Point(12, 489)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(221, 49)
-        Button3.TabIndex = 6
-        Button3.Text = "Access Management"
-        Button3.UseVisualStyleBackColor = False
+        LogoutButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        LogoutButton.Font = New Font("Segoe UI", 12.0F)
+        LogoutButton.Location = New Point(12, 719)
+        LogoutButton.Name = "LogoutButton"
+        LogoutButton.Size = New Size(221, 49)
+        LogoutButton.TabIndex = 7
+        LogoutButton.Text = "Logout"
+        LogoutButton.UseVisualStyleBackColor = False
+        ' 
+        ' AccessManagementButton
+        ' 
+        AccessManagementButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        AccessManagementButton.Font = New Font("Segoe UI", 12.0F)
+        AccessManagementButton.Location = New Point(12, 544)
+        AccessManagementButton.Name = "AccessManagementButton"
+        AccessManagementButton.Size = New Size(221, 49)
+        AccessManagementButton.TabIndex = 6
+        AccessManagementButton.Text = "Access Management"
+        AccessManagementButton.UseVisualStyleBackColor = False
         ' 
         ' Label3
         ' 
@@ -105,22 +118,22 @@ Partial Class Dashboard
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         Label3.ForeColor = Color.White
-        Label3.Location = New Point(12, 446)
+        Label3.Location = New Point(12, 501)
         Label3.Name = "Label3"
         Label3.Size = New Size(78, 28)
         Label3.TabIndex = 5
         Label3.Text = "System"
         ' 
-        ' Button2
+        ' AddNewAssetButton
         ' 
-        Button2.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        Button2.Font = New Font("Segoe UI", 12.0F)
-        Button2.Location = New Point(12, 367)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(221, 49)
-        Button2.TabIndex = 4
-        Button2.Text = "View entries"
-        Button2.UseVisualStyleBackColor = False
+        AddNewAssetButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        AddNewAssetButton.Font = New Font("Segoe UI", 12.0F)
+        AddNewAssetButton.Location = New Point(12, 359)
+        AddNewAssetButton.Name = "AddNewAssetButton"
+        AddNewAssetButton.Size = New Size(221, 49)
+        AddNewAssetButton.TabIndex = 4
+        AddNewAssetButton.Text = "Add new asset"
+        AddNewAssetButton.UseVisualStyleBackColor = False
         ' 
         ' Label2
         ' 
@@ -134,16 +147,16 @@ Partial Class Dashboard
         Label2.TabIndex = 3
         Label2.Text = "Quick actions"
         ' 
-        ' Button1
+        ' AssignAssetButton
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        Button1.Font = New Font("Segoe UI", 12.0F)
-        Button1.Location = New Point(11, 304)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(221, 49)
-        Button1.TabIndex = 2
-        Button1.Text = "Add new entry"
-        Button1.UseVisualStyleBackColor = False
+        AssignAssetButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        AssignAssetButton.Font = New Font("Segoe UI", 12.0F)
+        AssignAssetButton.Location = New Point(11, 304)
+        AssignAssetButton.Name = "AssignAssetButton"
+        AssignAssetButton.Size = New Size(221, 49)
+        AssignAssetButton.TabIndex = 2
+        AssignAssetButton.Text = "Assign asset"
+        AssignAssetButton.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
@@ -237,9 +250,9 @@ Partial Class Dashboard
         Label11.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label11.Location = New Point(7, 17)
         Label11.Name = "Label11"
-        Label11.Size = New Size(120, 32)
+        Label11.Size = New Size(144, 32)
         Label11.TabIndex = 5
-        Label11.Text = "All entries"
+        Label11.Text = "Total entries"
         ' 
         ' Panel3
         ' 
@@ -258,9 +271,9 @@ Partial Class Dashboard
         Label12.ForeColor = Color.White
         Label12.Location = New Point(1, 49)
         Label12.Name = "Label12"
-        Label12.Size = New Size(46, 54)
+        Label12.Size = New Size(69, 54)
         Label12.TabIndex = 6
-        Label12.Text = "2"
+        Label12.Text = "25"
         ' 
         ' Label13
         ' 
@@ -269,9 +282,9 @@ Partial Class Dashboard
         Label13.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label13.Location = New Point(7, 17)
         Label13.Name = "Label13"
-        Label13.Size = New Size(193, 32)
+        Label13.Size = New Size(135, 32)
         Label13.TabIndex = 5
-        Label13.Text = "Authorized users"
+        Label13.Text = "Total assets"
         ' 
         ' Dashboard
         ' 
@@ -299,13 +312,13 @@ Partial Class Dashboard
 
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents AssignAssetButton As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents AddNewAssetButton As Button
+    Friend WithEvents LogoutButton As Button
+    Friend WithEvents AccessManagementButton As Button
     Friend WithEvents FlowLayoutPanel4 As FlowLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
@@ -316,4 +329,5 @@ Partial Class Dashboard
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents RegisterUserButton As Button
 End Class
