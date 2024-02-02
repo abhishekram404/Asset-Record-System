@@ -157,6 +157,7 @@ Partial Class AddAssetForm
         ' 
         ' RichTextBox1
         ' 
+        RichTextBox1.BorderStyle = BorderStyle.FixedSingle
         RichTextBox1.Location = New Point(3, 37)
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(351, 267)
@@ -223,6 +224,7 @@ Partial Class AddAssetForm
         ' 
         ' TextBox1
         ' 
+        TextBox1.BorderStyle = BorderStyle.FixedSingle
         TextBox1.Font = New Font("Segoe UI", 14F)
         TextBox1.Location = New Point(3, 36)
         TextBox1.Name = "TextBox1"
