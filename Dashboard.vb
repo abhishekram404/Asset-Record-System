@@ -1,13 +1,13 @@
 ﻿Public Class Dashboard
     Private Sub AssignAssetButton_Click(sender As Object, e As EventArgs) Handles AssignAssetButton.Click
+        AssignAssetForm.Show()
+    End Sub
+
+    Private Sub AddAssetButton_Click(sender As Object, e As EventArgs) Handles AddNewAssetButton.Click
         AddAssetForm.Show()
     End Sub
 
     Private Sub RegisterUserButton_Click(sender As Object, e As EventArgs) Handles RegisterUserButton.Click
-        AddUser.Show()
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-
+        AddUserForm.Show()
     End Sub
 End Class
