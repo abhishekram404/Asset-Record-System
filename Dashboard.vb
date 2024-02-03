@@ -3,6 +3,10 @@
         AddAssetForm.Show()
     End Sub
 
+    Private Sub RegisterUserButton_Click(sender As Object, e As EventArgs) Handles RegisterUserButton.Click
+        AddUser.Show()
+    End Sub
+
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
 
     End Sub
