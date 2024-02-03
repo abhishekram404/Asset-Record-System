@@ -23,17 +23,17 @@ Partial Class AddUserForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Button1 = New Button()
-        SubmitNewAssetButton = New Button()
+        CancelButton = New Button()
+        RegisterUserButton = New Button()
         Panel5 = New Panel()
         Label5 = New Label()
-        TextBox3 = New TextBox()
+        UserAddressField = New TextBox()
         Panel4 = New Panel()
         Label4 = New Label()
-        TextBox2 = New TextBox()
+        UserPhoneField = New TextBox()
         Panel3 = New Panel()
         Label3 = New Label()
-        TextBox1 = New TextBox()
+        UserEmailField = New TextBox()
         Panel2 = New Panel()
         Label2 = New Label()
         UserFullnameField = New TextBox()
@@ -48,8 +48,8 @@ Partial Class AddUserForm
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
-        Panel1.Controls.Add(Button1)
-        Panel1.Controls.Add(SubmitNewAssetButton)
+        Panel1.Controls.Add(CancelButton)
+        Panel1.Controls.Add(RegisterUserButton)
         Panel1.Controls.Add(Panel5)
         Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Panel3)
@@ -60,34 +60,34 @@ Partial Class AddUserForm
         Panel1.Size = New Size(348, 512)
         Panel1.TabIndex = 0
         ' 
-        ' Button1
+        ' CancelButton
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        Button1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.Black
-        Button1.Location = New Point(14, 437)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(153, 56)
-        Button1.TabIndex = 8
-        Button1.Text = "Cancel"
-        Button1.UseVisualStyleBackColor = False
+        CancelButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        CancelButton.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CancelButton.ForeColor = Color.Black
+        CancelButton.Location = New Point(14, 437)
+        CancelButton.Name = "CancelButton"
+        CancelButton.Size = New Size(153, 56)
+        CancelButton.TabIndex = 8
+        CancelButton.Text = "Cancel"
+        CancelButton.UseVisualStyleBackColor = False
         ' 
-        ' SubmitNewAssetButton
+        ' RegisterUserButton
         ' 
-        SubmitNewAssetButton.BackColor = Color.FromArgb(CByte(82), CByte(148), CByte(226))
-        SubmitNewAssetButton.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        SubmitNewAssetButton.ForeColor = Color.White
-        SubmitNewAssetButton.Location = New Point(173, 437)
-        SubmitNewAssetButton.Name = "SubmitNewAssetButton"
-        SubmitNewAssetButton.Size = New Size(161, 56)
-        SubmitNewAssetButton.TabIndex = 7
-        SubmitNewAssetButton.Text = "Register user"
-        SubmitNewAssetButton.UseVisualStyleBackColor = False
+        RegisterUserButton.BackColor = Color.FromArgb(CByte(82), CByte(148), CByte(226))
+        RegisterUserButton.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        RegisterUserButton.ForeColor = Color.White
+        RegisterUserButton.Location = New Point(173, 437)
+        RegisterUserButton.Name = "RegisterUserButton"
+        RegisterUserButton.Size = New Size(161, 56)
+        RegisterUserButton.TabIndex = 7
+        RegisterUserButton.Text = "Register user"
+        RegisterUserButton.UseVisualStyleBackColor = False
         ' 
         ' Panel5
         ' 
         Panel5.Controls.Add(Label5)
-        Panel5.Controls.Add(TextBox3)
+        Panel5.Controls.Add(UserAddressField)
         Panel5.Location = New Point(14, 336)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(320, 82)
@@ -103,20 +103,20 @@ Partial Class AddUserForm
         Label5.TabIndex = 2
         Label5.Text = "Address"
         ' 
-        ' TextBox3
+        ' UserAddressField
         ' 
-        TextBox3.BorderStyle = BorderStyle.FixedSingle
-        TextBox3.Font = New Font("Segoe UI", 14F)
-        TextBox3.Location = New Point(3, 36)
-        TextBox3.Name = "TextBox3"
-        TextBox3.PlaceholderText = " e.g. Balkumari, Lalitpur"
-        TextBox3.Size = New Size(314, 39)
-        TextBox3.TabIndex = 0
+        UserAddressField.BorderStyle = BorderStyle.FixedSingle
+        UserAddressField.Font = New Font("Segoe UI", 14F)
+        UserAddressField.Location = New Point(3, 36)
+        UserAddressField.Name = "UserAddressField"
+        UserAddressField.PlaceholderText = " e.g. Balkumari, Lalitpur"
+        UserAddressField.Size = New Size(314, 39)
+        UserAddressField.TabIndex = 0
         ' 
         ' Panel4
         ' 
         Panel4.Controls.Add(Label4)
-        Panel4.Controls.Add(TextBox2)
+        Panel4.Controls.Add(UserPhoneField)
         Panel4.Location = New Point(14, 248)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(320, 82)
@@ -132,20 +132,20 @@ Partial Class AddUserForm
         Label4.TabIndex = 2
         Label4.Text = "Phone number"
         ' 
-        ' TextBox2
+        ' UserPhoneField
         ' 
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Font = New Font("Segoe UI", 14F)
-        TextBox2.Location = New Point(3, 36)
-        TextBox2.Name = "TextBox2"
-        TextBox2.PlaceholderText = " e.g. +977 98XXXXXXXX"
-        TextBox2.Size = New Size(314, 39)
-        TextBox2.TabIndex = 0
+        UserPhoneField.BorderStyle = BorderStyle.FixedSingle
+        UserPhoneField.Font = New Font("Segoe UI", 14F)
+        UserPhoneField.Location = New Point(3, 36)
+        UserPhoneField.Name = "UserPhoneField"
+        UserPhoneField.PlaceholderText = " e.g. +977 98XXXXXXXX"
+        UserPhoneField.Size = New Size(314, 39)
+        UserPhoneField.TabIndex = 0
         ' 
         ' Panel3
         ' 
         Panel3.Controls.Add(Label3)
-        Panel3.Controls.Add(TextBox1)
+        Panel3.Controls.Add(UserEmailField)
         Panel3.Location = New Point(14, 160)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(320, 82)
@@ -161,15 +161,15 @@ Partial Class AddUserForm
         Label3.TabIndex = 2
         Label3.Text = "Email address"
         ' 
-        ' TextBox1
+        ' UserEmailField
         ' 
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Font = New Font("Segoe UI", 14F)
-        TextBox1.Location = New Point(3, 36)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = " e.g. johndoe@example.com"
-        TextBox1.Size = New Size(314, 39)
-        TextBox1.TabIndex = 0
+        UserEmailField.BorderStyle = BorderStyle.FixedSingle
+        UserEmailField.Font = New Font("Segoe UI", 14F)
+        UserEmailField.Location = New Point(3, 36)
+        UserEmailField.Name = "UserEmailField"
+        UserEmailField.PlaceholderText = " e.g. johndoe@example.com"
+        UserEmailField.Size = New Size(314, 39)
+        UserEmailField.TabIndex = 0
         ' 
         ' Panel2
         ' 
@@ -210,14 +210,14 @@ Partial Class AddUserForm
         Label1.TabIndex = 1
         Label1.Text = "Register new user"
         ' 
-        ' AddUser
+        ' AddUserForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(82), CByte(148), CByte(226))
         ClientSize = New Size(372, 536)
         Controls.Add(Panel1)
-        Name = "AddUser"
+        Name = "AddUserForm"
         Text = "AddUser"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -239,13 +239,13 @@ Partial Class AddUserForm
     Friend WithEvents UserFullnameField As TextBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents UserAddressField As TextBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents UserPhoneField As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents SubmitNewAssetButton As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents UserEmailField As TextBox
+    Friend WithEvents RegisterUserButton As Button
+    Friend WithEvents CancelButton As Button
 End Class

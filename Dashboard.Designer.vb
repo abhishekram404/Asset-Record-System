@@ -33,6 +33,7 @@ Partial Class Dashboard
         AssignAssetButton = New Button()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
+        DashboardAssetsTable = New DataGridView()
         FlowLayoutPanel4 = New FlowLayoutPanel()
         Panel1 = New Panel()
         Label9 = New Label()
@@ -43,15 +44,18 @@ Partial Class Dashboard
         Panel3 = New Panel()
         Label12 = New Label()
         Label13 = New Label()
+        DashboardUsersTable = New DataGridView()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DashboardAssetsTable, ComponentModel.ISupportInitialize).BeginInit()
         FlowLayoutPanel4.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
+        CType(DashboardUsersTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -74,6 +78,8 @@ Partial Class Dashboard
         ' 
         ' SplitContainer1.Panel2
         ' 
+        SplitContainer1.Panel2.Controls.Add(DashboardUsersTable)
+        SplitContainer1.Panel2.Controls.Add(DashboardAssetsTable)
         SplitContainer1.Panel2.Controls.Add(FlowLayoutPanel4)
         SplitContainer1.Size = New Size(1126, 782)
         SplitContainer1.SplitterDistance = 245
@@ -82,7 +88,7 @@ Partial Class Dashboard
         ' RegisterUserButton
         ' 
         RegisterUserButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        RegisterUserButton.Font = New Font("Segoe UI", 12.0F)
+        RegisterUserButton.Font = New Font("Segoe UI", 12F)
         RegisterUserButton.Location = New Point(12, 414)
         RegisterUserButton.Name = "RegisterUserButton"
         RegisterUserButton.Size = New Size(221, 49)
@@ -93,7 +99,7 @@ Partial Class Dashboard
         ' LogoutButton
         ' 
         LogoutButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        LogoutButton.Font = New Font("Segoe UI", 12.0F)
+        LogoutButton.Font = New Font("Segoe UI", 12F)
         LogoutButton.Location = New Point(12, 719)
         LogoutButton.Name = "LogoutButton"
         LogoutButton.Size = New Size(221, 49)
@@ -104,7 +110,7 @@ Partial Class Dashboard
         ' AccessManagementButton
         ' 
         AccessManagementButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        AccessManagementButton.Font = New Font("Segoe UI", 12.0F)
+        AccessManagementButton.Font = New Font("Segoe UI", 12F)
         AccessManagementButton.Location = New Point(12, 544)
         AccessManagementButton.Name = "AccessManagementButton"
         AccessManagementButton.Size = New Size(221, 49)
@@ -116,7 +122,7 @@ Partial Class Dashboard
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         Label3.ForeColor = Color.White
         Label3.Location = New Point(12, 501)
         Label3.Name = "Label3"
@@ -127,7 +133,7 @@ Partial Class Dashboard
         ' AddNewAssetButton
         ' 
         AddNewAssetButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        AddNewAssetButton.Font = New Font("Segoe UI", 12.0F)
+        AddNewAssetButton.Font = New Font("Segoe UI", 12F)
         AddNewAssetButton.Location = New Point(12, 359)
         AddNewAssetButton.Name = "AddNewAssetButton"
         AddNewAssetButton.Size = New Size(221, 49)
@@ -139,7 +145,7 @@ Partial Class Dashboard
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(11, 261)
         Label2.Name = "Label2"
@@ -150,7 +156,7 @@ Partial Class Dashboard
         ' AssignAssetButton
         ' 
         AssignAssetButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        AssignAssetButton.Font = New Font("Segoe UI", 12.0F)
+        AssignAssetButton.Font = New Font("Segoe UI", 12F)
         AssignAssetButton.Location = New Point(11, 304)
         AssignAssetButton.Name = "AssignAssetButton"
         AssignAssetButton.Size = New Size(221, 49)
@@ -162,7 +168,7 @@ Partial Class Dashboard
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI Semibold", 18.0F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI Semibold", 18F, FontStyle.Bold)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(62, 191)
         Label1.Name = "Label1"
@@ -179,6 +185,19 @@ Partial Class Dashboard
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
+        ' 
+        ' DashboardAssetsTable
+        ' 
+        DashboardAssetsTable.AllowUserToAddRows = False
+        DashboardAssetsTable.AllowUserToDeleteRows = False
+        DashboardAssetsTable.AllowUserToOrderColumns = True
+        DashboardAssetsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DashboardAssetsTable.Location = New Point(42, 239)
+        DashboardAssetsTable.Name = "DashboardAssetsTable"
+        DashboardAssetsTable.ReadOnly = True
+        DashboardAssetsTable.RowHeadersWidth = 51
+        DashboardAssetsTable.Size = New Size(300, 188)
+        DashboardAssetsTable.TabIndex = 5
         ' 
         ' FlowLayoutPanel4
         ' 
@@ -203,7 +222,7 @@ Partial Class Dashboard
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold)
+        Label9.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
         Label9.ForeColor = Color.White
         Label9.Location = New Point(1, 49)
         Label9.Name = "Label9"
@@ -214,7 +233,7 @@ Partial Class Dashboard
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 14.0F)
+        Label5.Font = New Font("Segoe UI", 14F)
         Label5.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label5.Location = New Point(7, 17)
         Label5.Name = "Label5"
@@ -235,7 +254,7 @@ Partial Class Dashboard
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold)
+        Label10.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
         Label10.ForeColor = Color.White
         Label10.Location = New Point(1, 49)
         Label10.Name = "Label10"
@@ -246,7 +265,7 @@ Partial Class Dashboard
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 14.0F)
+        Label11.Font = New Font("Segoe UI", 14F)
         Label11.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label11.Location = New Point(7, 17)
         Label11.Name = "Label11"
@@ -267,7 +286,7 @@ Partial Class Dashboard
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold)
+        Label12.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
         Label12.ForeColor = Color.White
         Label12.Location = New Point(1, 49)
         Label12.Name = "Label12"
@@ -278,7 +297,7 @@ Partial Class Dashboard
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 14.0F)
+        Label13.Font = New Font("Segoe UI", 14F)
         Label13.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label13.Location = New Point(7, 17)
         Label13.Name = "Label13"
@@ -286,9 +305,22 @@ Partial Class Dashboard
         Label13.TabIndex = 5
         Label13.Text = "Total assets"
         ' 
+        ' DashboardUsersTable
+        ' 
+        DashboardUsersTable.AllowUserToAddRows = False
+        DashboardUsersTable.AllowUserToDeleteRows = False
+        DashboardUsersTable.AllowUserToOrderColumns = True
+        DashboardUsersTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DashboardUsersTable.Location = New Point(362, 239)
+        DashboardUsersTable.Name = "DashboardUsersTable"
+        DashboardUsersTable.ReadOnly = True
+        DashboardUsersTable.RowHeadersWidth = 51
+        DashboardUsersTable.Size = New Size(300, 188)
+        DashboardUsersTable.TabIndex = 6
+        ' 
         ' Dashboard
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1125, 781)
         Controls.Add(SplitContainer1)
@@ -300,6 +332,7 @@ Partial Class Dashboard
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DashboardAssetsTable, ComponentModel.ISupportInitialize).EndInit()
         FlowLayoutPanel4.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -307,6 +340,7 @@ Partial Class Dashboard
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        CType(DashboardUsersTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -330,4 +364,6 @@ Partial Class Dashboard
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents RegisterUserButton As Button
+    Friend WithEvents DashboardAssetsTable As DataGridView
+    Friend WithEvents DashboardUsersTable As DataGridView
 End Class
