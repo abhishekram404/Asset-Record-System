@@ -31,8 +31,9 @@ Partial Class Dashboard
         AddNewAssetButton = New Button()
         Label2 = New Label()
         AssignAssetButton = New Button()
-        Label1 = New Label()
+        AuthenticatedUsername = New Label()
         PictureBox1 = New PictureBox()
+        DashboardUsersTable = New DataGridView()
         DashboardAssetsTable = New DataGridView()
         FlowLayoutPanel4 = New FlowLayoutPanel()
         Panel1 = New Panel()
@@ -44,18 +45,18 @@ Partial Class Dashboard
         Panel3 = New Panel()
         Label12 = New Label()
         Label13 = New Label()
-        DashboardUsersTable = New DataGridView()
+        Label4 = New Label()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DashboardUsersTable, ComponentModel.ISupportInitialize).BeginInit()
         CType(DashboardAssetsTable, ComponentModel.ISupportInitialize).BeginInit()
         FlowLayoutPanel4.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(DashboardUsersTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -66,6 +67,7 @@ Partial Class Dashboard
         ' SplitContainer1.Panel1
         ' 
         SplitContainer1.Panel1.BackColor = Color.FromArgb(CByte(82), CByte(148), CByte(226))
+        SplitContainer1.Panel1.Controls.Add(Label4)
         SplitContainer1.Panel1.Controls.Add(RegisterUserButton)
         SplitContainer1.Panel1.Controls.Add(LogoutButton)
         SplitContainer1.Panel1.Controls.Add(AccessManagementButton)
@@ -73,7 +75,7 @@ Partial Class Dashboard
         SplitContainer1.Panel1.Controls.Add(AddNewAssetButton)
         SplitContainer1.Panel1.Controls.Add(Label2)
         SplitContainer1.Panel1.Controls.Add(AssignAssetButton)
-        SplitContainer1.Panel1.Controls.Add(Label1)
+        SplitContainer1.Panel1.Controls.Add(AuthenticatedUsername)
         SplitContainer1.Panel1.Controls.Add(PictureBox1)
         ' 
         ' SplitContainer1.Panel2
@@ -164,17 +166,17 @@ Partial Class Dashboard
         AssignAssetButton.Text = "Assign asset"
         AssignAssetButton.UseVisualStyleBackColor = False
         ' 
-        ' Label1
+        ' AuthenticatedUsername
         ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI Semibold", 18F, FontStyle.Bold)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(62, 191)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(109, 41)
-        Label1.TabIndex = 1
-        Label1.Text = "Admin"
+        AuthenticatedUsername.AutoSize = True
+        AuthenticatedUsername.BackColor = Color.Transparent
+        AuthenticatedUsername.Font = New Font("Segoe UI Semibold", 18F, FontStyle.Bold)
+        AuthenticatedUsername.ForeColor = Color.White
+        AuthenticatedUsername.Location = New Point(62, 210)
+        AuthenticatedUsername.Name = "AuthenticatedUsername"
+        AuthenticatedUsername.Size = New Size(109, 41)
+        AuthenticatedUsername.TabIndex = 1
+        AuthenticatedUsername.Text = "Admin"
         ' 
         ' PictureBox1
         ' 
@@ -185,6 +187,19 @@ Partial Class Dashboard
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
+        ' 
+        ' DashboardUsersTable
+        ' 
+        DashboardUsersTable.AllowUserToAddRows = False
+        DashboardUsersTable.AllowUserToDeleteRows = False
+        DashboardUsersTable.AllowUserToOrderColumns = True
+        DashboardUsersTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DashboardUsersTable.Location = New Point(362, 239)
+        DashboardUsersTable.Name = "DashboardUsersTable"
+        DashboardUsersTable.ReadOnly = True
+        DashboardUsersTable.RowHeadersWidth = 51
+        DashboardUsersTable.Size = New Size(300, 188)
+        DashboardUsersTable.TabIndex = 6
         ' 
         ' DashboardAssetsTable
         ' 
@@ -305,18 +320,17 @@ Partial Class Dashboard
         Label13.TabIndex = 5
         Label13.Text = "Total assets"
         ' 
-        ' DashboardUsersTable
+        ' Label4
         ' 
-        DashboardUsersTable.AllowUserToAddRows = False
-        DashboardUsersTable.AllowUserToDeleteRows = False
-        DashboardUsersTable.AllowUserToOrderColumns = True
-        DashboardUsersTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DashboardUsersTable.Location = New Point(362, 239)
-        DashboardUsersTable.Name = "DashboardUsersTable"
-        DashboardUsersTable.ReadOnly = True
-        DashboardUsersTable.RowHeadersWidth = 51
-        DashboardUsersTable.Size = New Size(300, 188)
-        DashboardUsersTable.TabIndex = 6
+        Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Segoe UI Semibold", 10F)
+        Label4.ForeColor = Color.White
+        Label4.Location = New Point(63, 185)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(107, 23)
+        Label4.TabIndex = 9
+        Label4.Text = "Logged in as"
         ' 
         ' Dashboard
         ' 
@@ -332,6 +346,7 @@ Partial Class Dashboard
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DashboardUsersTable, ComponentModel.ISupportInitialize).EndInit()
         CType(DashboardAssetsTable, ComponentModel.ISupportInitialize).EndInit()
         FlowLayoutPanel4.ResumeLayout(False)
         Panel1.ResumeLayout(False)
@@ -340,14 +355,13 @@ Partial Class Dashboard
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
-        CType(DashboardUsersTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents Label2 As Label
     Friend WithEvents AssignAssetButton As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents AuthenticatedUsername As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents AddNewAssetButton As Button
@@ -366,4 +380,5 @@ Partial Class Dashboard
     Friend WithEvents RegisterUserButton As Button
     Friend WithEvents DashboardAssetsTable As DataGridView
     Friend WithEvents DashboardUsersTable As DataGridView
+    Friend WithEvents Label4 As Label
 End Class

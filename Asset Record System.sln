@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Asset Record System", "Asset Record System.vbproj", "{DA3D30C9-27C0-4EBD-973E-702A7A5C059E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA3D30C9-27C0-4EBD-973E-702A7A5C059E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3D30C9-27C0-4EBD-973E-702A7A5C059E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3D30C9-27C0-4EBD-973E-702A7A5C059E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3D30C9-27C0-4EBD-973E-702A7A5C059E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF48996C-A6C1-4F27-A127-F5D48C81D8B3}
+	EndGlobalSection
+EndGlobal

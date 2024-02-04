@@ -31,6 +31,8 @@
             Return
         End If
 
+        LocalSession.username = username
+
         ' If execution reached here then the credentials are valid, and the user is authenticated
         Me.Hide()
         Dashboard.Show()
