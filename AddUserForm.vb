@@ -10,10 +10,7 @@
         Dim query As String = $"INSERT INTO Users (fullName, email, phone, address) VALUES ('{fullName}', '{email}', '{phone}', '{address}') "
 
         DatabaseHelper.InsertData(query)
-
-        query = "SELECT * from Users"
-        Dim dataTable As DataTable = DatabaseHelper.ExecuteQuery(query)
-        Dashboard.DashboardUsersTable.DataSource = dataTable
+        Dashboard.PopulateUsersTable()
 
         Me.Hide()
 

@@ -7,13 +7,21 @@
             Me.Hide()
             LoginForm.Show()
         Else
-            Dim assetsTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Assets")
-            Dim usersTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Users")
             AuthenticatedUsername.Text = dataTable.Rows(0)("username").ToString()
-            DashboardAssetsTable.DataSource = assetsTable
-            DashboardUsersTable.DataSource = usersTable
+            PopulateAssetsTable()
+            PopulateUsersTable()
         End If
 
+    End Sub
+
+    Public Sub PopulateAssetsTable()
+        Dim assetsTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Assets")
+        DashboardAssetsTable.DataSource = assetsTable
+    End Sub
+
+    Public Sub PopulateUsersTable()
+        Dim usersTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Users")
+        DashboardUsersTable.DataSource = usersTable
     End Sub
     Private Sub AssignAssetButton_Click(sender As Object, e As EventArgs) Handles AssignAssetButton.Click
         AssignAssetForm.Show()

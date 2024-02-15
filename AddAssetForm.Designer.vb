@@ -24,28 +24,28 @@ Partial Class AddAssetForm
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Panel1 = New Panel()
-        Button1 = New Button()
+        CancelButton = New Button()
         SubmitNewAssetButton = New Button()
         Panel6 = New Panel()
-        NumericUpDown1 = New NumericUpDown()
+        AssetWorthField = New NumericUpDown()
         Label6 = New Label()
         Panel5 = New Panel()
-        DateTimePicker1 = New DateTimePicker()
+        AssetPurchaseDateField = New DateTimePicker()
         Label5 = New Label()
         Panel4 = New Panel()
-        RichTextBox1 = New RichTextBox()
+        AssetDescriptionField = New RichTextBox()
         Label4 = New Label()
         Panel3 = New Panel()
-        ComboBox1 = New ComboBox()
+        AssetTypeDropdownField = New ComboBox()
         Label3 = New Label()
         Panel2 = New Panel()
         Label2 = New Label()
-        TextBox1 = New TextBox()
+        AssetNameField = New TextBox()
         Label1 = New Label()
         ContextMenuStrip1 = New ContextMenuStrip(components)
         Panel1.SuspendLayout()
         Panel6.SuspendLayout()
-        CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(AssetWorthField, ComponentModel.ISupportInitialize).BeginInit()
         Panel5.SuspendLayout()
         Panel4.SuspendLayout()
         Panel3.SuspendLayout()
@@ -55,7 +55,7 @@ Partial Class AddAssetForm
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(CancelButton)
         Panel1.Controls.Add(SubmitNewAssetButton)
         Panel1.Controls.Add(Panel6)
         Panel1.Controls.Add(Panel5)
@@ -68,17 +68,17 @@ Partial Class AddAssetForm
         Panel1.Size = New Size(764, 492)
         Panel1.TabIndex = 0
         ' 
-        ' Button1
+        ' CancelButton
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        Button1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.Black
-        Button1.Location = New Point(391, 410)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(184, 56)
-        Button1.TabIndex = 7
-        Button1.Text = "Cancel"
-        Button1.UseVisualStyleBackColor = False
+        CancelButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        CancelButton.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CancelButton.ForeColor = Color.Black
+        CancelButton.Location = New Point(391, 410)
+        CancelButton.Name = "CancelButton"
+        CancelButton.Size = New Size(184, 56)
+        CancelButton.TabIndex = 7
+        CancelButton.Text = "Cancel"
+        CancelButton.UseVisualStyleBackColor = False
         ' 
         ' SubmitNewAssetButton
         ' 
@@ -94,20 +94,21 @@ Partial Class AddAssetForm
         ' 
         ' Panel6
         ' 
-        Panel6.Controls.Add(NumericUpDown1)
+        Panel6.Controls.Add(AssetWorthField)
         Panel6.Controls.Add(Label6)
         Panel6.Location = New Point(17, 292)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(357, 82)
         Panel6.TabIndex = 5
         ' 
-        ' NumericUpDown1
+        ' AssetWorthField
         ' 
-        NumericUpDown1.Font = New Font("Segoe UI", 14F)
-        NumericUpDown1.Location = New Point(3, 40)
-        NumericUpDown1.Name = "NumericUpDown1"
-        NumericUpDown1.Size = New Size(351, 39)
-        NumericUpDown1.TabIndex = 6
+        AssetWorthField.Font = New Font("Segoe UI", 14F)
+        AssetWorthField.Location = New Point(3, 40)
+        AssetWorthField.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
+        AssetWorthField.Name = "AssetWorthField"
+        AssetWorthField.Size = New Size(351, 39)
+        AssetWorthField.TabIndex = 6
         ' 
         ' Label6
         ' 
@@ -121,20 +122,20 @@ Partial Class AddAssetForm
         ' 
         ' Panel5
         ' 
-        Panel5.Controls.Add(DateTimePicker1)
+        Panel5.Controls.Add(AssetPurchaseDateField)
         Panel5.Controls.Add(Label5)
         Panel5.Location = New Point(17, 393)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(357, 82)
         Panel5.TabIndex = 4
         ' 
-        ' DateTimePicker1
+        ' AssetPurchaseDateField
         ' 
-        DateTimePicker1.Font = New Font("Segoe UI", 12F)
-        DateTimePicker1.Location = New Point(3, 39)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(351, 34)
-        DateTimePicker1.TabIndex = 3
+        AssetPurchaseDateField.Font = New Font("Segoe UI", 12F)
+        AssetPurchaseDateField.Location = New Point(3, 39)
+        AssetPurchaseDateField.Name = "AssetPurchaseDateField"
+        AssetPurchaseDateField.Size = New Size(351, 34)
+        AssetPurchaseDateField.TabIndex = 3
         ' 
         ' Label5
         ' 
@@ -148,21 +149,21 @@ Partial Class AddAssetForm
         ' 
         ' Panel4
         ' 
-        Panel4.Controls.Add(RichTextBox1)
+        Panel4.Controls.Add(AssetDescriptionField)
         Panel4.Controls.Add(Label4)
         Panel4.Location = New Point(391, 85)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(357, 319)
         Panel4.TabIndex = 3
         ' 
-        ' RichTextBox1
+        ' AssetDescriptionField
         ' 
-        RichTextBox1.BorderStyle = BorderStyle.FixedSingle
-        RichTextBox1.Location = New Point(3, 37)
-        RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(351, 267)
-        RichTextBox1.TabIndex = 3
-        RichTextBox1.Text = ""
+        AssetDescriptionField.BorderStyle = BorderStyle.FixedSingle
+        AssetDescriptionField.Location = New Point(3, 37)
+        AssetDescriptionField.Name = "AssetDescriptionField"
+        AssetDescriptionField.Size = New Size(351, 267)
+        AssetDescriptionField.TabIndex = 3
+        AssetDescriptionField.Text = ""
         ' 
         ' Label4
         ' 
@@ -176,22 +177,22 @@ Partial Class AddAssetForm
         ' 
         ' Panel3
         ' 
-        Panel3.Controls.Add(ComboBox1)
+        Panel3.Controls.Add(AssetTypeDropdownField)
         Panel3.Controls.Add(Label3)
         Panel3.Location = New Point(17, 191)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(357, 82)
         Panel3.TabIndex = 2
         ' 
-        ' ComboBox1
+        ' AssetTypeDropdownField
         ' 
-        ComboBox1.Font = New Font("Segoe UI", 14F)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Uncategorized", "Computer hardware", "Furniture", "Electronic equipment", "Vehicle", "Machinery", "Office supplies"})
-        ComboBox1.Location = New Point(3, 37)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(351, 39)
-        ComboBox1.TabIndex = 3
+        AssetTypeDropdownField.Font = New Font("Segoe UI", 14F)
+        AssetTypeDropdownField.FormattingEnabled = True
+        AssetTypeDropdownField.Items.AddRange(New Object() {"Uncategorized", "Computer hardware", "Furniture", "Electronic equipment", "Vehicle", "Machinery", "Office supplies"})
+        AssetTypeDropdownField.Location = New Point(3, 37)
+        AssetTypeDropdownField.Name = "AssetTypeDropdownField"
+        AssetTypeDropdownField.Size = New Size(351, 39)
+        AssetTypeDropdownField.TabIndex = 3
         ' 
         ' Label3
         ' 
@@ -206,7 +207,7 @@ Partial Class AddAssetForm
         ' Panel2
         ' 
         Panel2.Controls.Add(Label2)
-        Panel2.Controls.Add(TextBox1)
+        Panel2.Controls.Add(AssetNameField)
         Panel2.Location = New Point(17, 85)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(357, 82)
@@ -222,15 +223,15 @@ Partial Class AddAssetForm
         Label2.TabIndex = 2
         Label2.Text = "Asset name"
         ' 
-        ' TextBox1
+        ' AssetNameField
         ' 
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Font = New Font("Segoe UI", 14F)
-        TextBox1.Location = New Point(3, 36)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "Asset name"
-        TextBox1.Size = New Size(351, 39)
-        TextBox1.TabIndex = 0
+        AssetNameField.BorderStyle = BorderStyle.FixedSingle
+        AssetNameField.Font = New Font("Segoe UI", 14F)
+        AssetNameField.Location = New Point(3, 36)
+        AssetNameField.Name = "AssetNameField"
+        AssetNameField.PlaceholderText = "Asset name"
+        AssetNameField.Size = New Size(351, 39)
+        AssetNameField.TabIndex = 0
         ' 
         ' Label1
         ' 
@@ -261,7 +262,7 @@ Partial Class AddAssetForm
         Panel1.PerformLayout()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
-        CType(NumericUpDown1, ComponentModel.ISupportInitialize).EndInit()
+        CType(AssetWorthField, ComponentModel.ISupportInitialize).EndInit()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
         Panel4.ResumeLayout(False)
@@ -276,21 +277,21 @@ Partial Class AddAssetForm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents AssetNameField As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents AssetTypeDropdownField As ComboBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents AssetDescriptionField As RichTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents AssetPurchaseDateField As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents AssetWorthField As NumericUpDown
     Friend WithEvents Label6 As Label
     Friend WithEvents SubmitNewAssetButton As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents CancelButton As Button
 End Class
