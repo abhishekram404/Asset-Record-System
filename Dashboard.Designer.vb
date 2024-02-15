@@ -22,8 +22,10 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         SplitContainer1 = New SplitContainer()
+        Label4 = New Label()
         RegisterUserButton = New Button()
         LogoutButton = New Button()
         AccessManagementButton = New Button()
@@ -45,7 +47,7 @@ Partial Class Dashboard
         Panel3 = New Panel()
         Label12 = New Label()
         Label13 = New Label()
-        Label4 = New Label()
+        DatabaseHelperBindingSource = New BindingSource(components)
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
@@ -57,6 +59,7 @@ Partial Class Dashboard
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
+        CType(DatabaseHelperBindingSource, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -86,6 +89,18 @@ Partial Class Dashboard
         SplitContainer1.Size = New Size(1126, 782)
         SplitContainer1.SplitterDistance = 245
         SplitContainer1.TabIndex = 1
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Segoe UI Semibold", 10F)
+        Label4.ForeColor = Color.White
+        Label4.Location = New Point(63, 185)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(107, 23)
+        Label4.TabIndex = 9
+        Label4.Text = "Logged in as"
         ' 
         ' RegisterUserButton
         ' 
@@ -193,12 +208,13 @@ Partial Class Dashboard
         DashboardUsersTable.AllowUserToAddRows = False
         DashboardUsersTable.AllowUserToDeleteRows = False
         DashboardUsersTable.AllowUserToOrderColumns = True
+        DashboardUsersTable.BackgroundColor = Color.White
         DashboardUsersTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DashboardUsersTable.Location = New Point(362, 239)
+        DashboardUsersTable.Location = New Point(438, 239)
         DashboardUsersTable.Name = "DashboardUsersTable"
         DashboardUsersTable.ReadOnly = True
         DashboardUsersTable.RowHeadersWidth = 51
-        DashboardUsersTable.Size = New Size(300, 188)
+        DashboardUsersTable.Size = New Size(425, 188)
         DashboardUsersTable.TabIndex = 6
         ' 
         ' DashboardAssetsTable
@@ -206,12 +222,13 @@ Partial Class Dashboard
         DashboardAssetsTable.AllowUserToAddRows = False
         DashboardAssetsTable.AllowUserToDeleteRows = False
         DashboardAssetsTable.AllowUserToOrderColumns = True
+        DashboardAssetsTable.BackgroundColor = Color.White
         DashboardAssetsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DashboardAssetsTable.Location = New Point(42, 239)
+        DashboardAssetsTable.Location = New Point(19, 239)
         DashboardAssetsTable.Name = "DashboardAssetsTable"
         DashboardAssetsTable.ReadOnly = True
         DashboardAssetsTable.RowHeadersWidth = 51
-        DashboardAssetsTable.Size = New Size(300, 188)
+        DashboardAssetsTable.Size = New Size(399, 188)
         DashboardAssetsTable.TabIndex = 5
         ' 
         ' FlowLayoutPanel4
@@ -320,17 +337,9 @@ Partial Class Dashboard
         Label13.TabIndex = 5
         Label13.Text = "Total assets"
         ' 
-        ' Label4
+        ' DatabaseHelperBindingSource
         ' 
-        Label4.AutoSize = True
-        Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Segoe UI Semibold", 10F)
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(63, 185)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(107, 23)
-        Label4.TabIndex = 9
-        Label4.Text = "Logged in as"
+        DatabaseHelperBindingSource.DataSource = GetType(DatabaseHelper)
         ' 
         ' Dashboard
         ' 
@@ -355,6 +364,7 @@ Partial Class Dashboard
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        CType(DatabaseHelperBindingSource, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -381,4 +391,5 @@ Partial Class Dashboard
     Friend WithEvents DashboardAssetsTable As DataGridView
     Friend WithEvents DashboardUsersTable As DataGridView
     Friend WithEvents Label4 As Label
+    Friend WithEvents DatabaseHelperBindingSource As BindingSource
 End Class

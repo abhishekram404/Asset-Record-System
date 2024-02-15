@@ -7,7 +7,11 @@
             Me.Hide()
             LoginForm.Show()
         Else
+            Dim assetsTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Assets")
+            Dim usersTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Users")
             AuthenticatedUsername.Text = dataTable.Rows(0)("username").ToString()
+            DashboardAssetsTable.DataSource = assetsTable
+            DashboardUsersTable.DataSource = usersTable
         End If
 
     End Sub
