@@ -48,6 +48,7 @@ Partial Class Dashboard
         Label12 = New Label()
         Label13 = New Label()
         DatabaseHelperBindingSource = New BindingSource(components)
+        AssignmentTable = New DataGridView()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
@@ -60,6 +61,7 @@ Partial Class Dashboard
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
         CType(DatabaseHelperBindingSource, ComponentModel.ISupportInitialize).BeginInit()
+        CType(AssignmentTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -83,6 +85,7 @@ Partial Class Dashboard
         ' 
         ' SplitContainer1.Panel2
         ' 
+        SplitContainer1.Panel2.Controls.Add(AssignmentTable)
         SplitContainer1.Panel2.Controls.Add(DashboardUsersTable)
         SplitContainer1.Panel2.Controls.Add(DashboardAssetsTable)
         SplitContainer1.Panel2.Controls.Add(FlowLayoutPanel4)
@@ -341,6 +344,20 @@ Partial Class Dashboard
         ' 
         DatabaseHelperBindingSource.DataSource = GetType(DatabaseHelper)
         ' 
+        ' AssignmentTable
+        ' 
+        AssignmentTable.AllowUserToAddRows = False
+        AssignmentTable.AllowUserToDeleteRows = False
+        AssignmentTable.AllowUserToOrderColumns = True
+        AssignmentTable.BackgroundColor = Color.White
+        AssignmentTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        AssignmentTable.Location = New Point(19, 450)
+        AssignmentTable.Name = "AssignmentTable"
+        AssignmentTable.ReadOnly = True
+        AssignmentTable.RowHeadersWidth = 51
+        AssignmentTable.Size = New Size(399, 188)
+        AssignmentTable.TabIndex = 7
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -365,6 +382,7 @@ Partial Class Dashboard
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         CType(DatabaseHelperBindingSource, ComponentModel.ISupportInitialize).EndInit()
+        CType(AssignmentTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -392,4 +410,5 @@ Partial Class Dashboard
     Friend WithEvents DashboardUsersTable As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents DatabaseHelperBindingSource As BindingSource
+    Friend WithEvents AssignmentTable As DataGridView
 End Class

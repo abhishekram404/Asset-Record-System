@@ -10,6 +10,7 @@
             AuthenticatedUsername.Text = dataTable.Rows(0)("username").ToString()
             PopulateAssetsTable()
             PopulateUsersTable()
+            PopulateAssignmentsTable()
         End If
 
     End Sub
@@ -22,6 +23,10 @@
     Public Sub PopulateUsersTable()
         Dim usersTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Users")
         DashboardUsersTable.DataSource = usersTable
+    End Sub
+    Public Sub PopulateAssignmentsTable()
+        Dim assignmentTableData As DataTable = DatabaseHelper.ExecuteQuery("select * from AssetUserAssignment")
+        AssignmentTable.DataSource = assignmentTableData
     End Sub
     Private Sub AssignAssetButton_Click(sender As Object, e As EventArgs) Handles AssignAssetButton.Click
         AssignAssetForm.Show()
