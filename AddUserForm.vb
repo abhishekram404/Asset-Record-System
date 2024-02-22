@@ -12,8 +12,12 @@
         DatabaseHelper.InsertData(query)
         Dashboard.PopulateUsersTable()
 
-        Me.Hide()
+        Me.Close()
 
         MessageBox.Show("User registered successfully.", "Success", MessageBoxButtons.OK)
+    End Sub
+
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+        Me.Close()
     End Sub
 End Class

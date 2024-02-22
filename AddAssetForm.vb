@@ -16,7 +16,7 @@ Public Class AddAssetForm
 
             Dashboard.PopulateAssetsTable()
             ClearForm()
-            Me.Hide()
+            Me.Close()
 
             MessageBox.Show("Asset added successfully")
         End If
@@ -61,7 +61,7 @@ Public Class AddAssetForm
 
     Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         ClearForm()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles AssetPurchaseDateField.ValueChanged

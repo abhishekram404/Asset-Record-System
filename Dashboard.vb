@@ -4,7 +4,7 @@
         Dim dataTable As DataTable = DatabaseHelper.ExecuteQuery($"select top 1 * from Admins where username='{LocalSession.username}'")
 
         If dataTable.Rows.Count = 0 Then
-            Me.Hide()
+            Me.Close()
             LoginForm.Show()
         Else
             AuthenticatedUsername.Text = dataTable.Rows(0)("username").ToString()
@@ -35,18 +35,42 @@
     End Function
 
     Public Sub PopulateAssetsTable()
-        Dim query As String = "select * from Assets"
+        Dim query As String =
+            "SELECT 
+                assetId as ID, 
+                assetName as 'Asset Name', 
+                assetType as Type, 
+                purchaseDate as 'Purchase Date', 
+                assetWorth as 'Worth', 
+                description as 'Description' 
+            from Assets"
         Dim assetsTable As DataTable = DatabaseHelper.ExecuteQuery(query)
         DashboardAssetsTable.DataSource = assetsTable
     End Sub
 
     Public Sub PopulateUsersTable()
-        Dim query As String = "SELECT userId as ID, fullName as Name, email as Email, phone as Phone, address as Address from Users"
+        Dim query As String =
+            "SELECT 
+                userId as ID, 
+                fullName as Name, 
+                email as Email, 
+                phone as Phone, 
+                address as Address 
+            from Users"
         Dim usersTable As DataTable = DatabaseHelper.ExecuteQuery(query)
         DashboardUsersTable.DataSource = usersTable
     End Sub
     Public Sub PopulateAssignmentsTable()
-        Dim assignmentTableData As DataTable = DatabaseHelper.ExecuteQuery("select * from AssetUserAssignment")
+        Dim query As String =
+            "SELECT 
+                assignmentId as ID, 
+                assetId as 'Asset ID', 
+                userId as 'User ID', 
+                assignmentDate as 'Assignment Date', 
+                estimatedReturnDate as 'Estimated Return Date', 
+                notes as Notes 
+            from AssetUserAssignment"
+        Dim assignmentTableData As DataTable = DatabaseHelper.ExecuteQuery(query)
         AssignmentTable.DataSource = assignmentTableData
     End Sub
     Private Sub AssignAssetButton_Click(sender As Object, e As EventArgs) Handles AssignAssetButton.Click

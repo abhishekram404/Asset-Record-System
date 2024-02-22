@@ -27,7 +27,7 @@
         Dashboard.PopulateAssignmentsTable()
         Dashboard.LoadDashboardCardsData()
 
-        Me.Hide()
+        Me.Close()
 
         MessageBox.Show("Assignment successful")
     End Sub
@@ -46,7 +46,9 @@
     End Sub
 
     Private Sub LoadAssetsDropdown()
-        Dim assets As DataTable = DatabaseHelper.ExecuteQuery("SELECT assetId, assetName, assetType from Assets")
+        Dim query = "SELECT assetId, assetName, assetType from Assets
+                     where assetId not in (select assetId from AssetUserAssignment)"
+        Dim assets As DataTable = DatabaseHelper.ExecuteQuery(query)
         If assets.Rows.Count > 0 Then
             For Each row As DataRow In assets.Rows
                 Dim assetId = Convert.ToInt32(row("assetId"))
@@ -59,7 +61,7 @@
         End If
     End Sub
     Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
