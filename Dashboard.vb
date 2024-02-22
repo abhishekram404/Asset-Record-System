@@ -16,12 +16,14 @@
     End Sub
 
     Public Sub PopulateAssetsTable()
-        Dim assetsTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Assets")
+        Dim query As String = "select * from Assets"
+        Dim assetsTable As DataTable = DatabaseHelper.ExecuteQuery(query)
         DashboardAssetsTable.DataSource = assetsTable
     End Sub
 
     Public Sub PopulateUsersTable()
-        Dim usersTable As DataTable = DatabaseHelper.ExecuteQuery("select * from Users")
+        Dim query As String = "SELECT userId as ID, fullName as Name, email as Email, phone as Phone, address as Address from Users"
+        Dim usersTable As DataTable = DatabaseHelper.ExecuteQuery(query)
         DashboardUsersTable.DataSource = usersTable
     End Sub
     Public Sub PopulateAssignmentsTable()
