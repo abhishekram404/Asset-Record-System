@@ -35,25 +35,26 @@ Partial Class Dashboard
         AssignAssetButton = New Button()
         AuthenticatedUsername = New Label()
         PictureBox1 = New PictureBox()
+        AssignmentTable = New DataGridView()
         DashboardUsersTable = New DataGridView()
         DashboardAssetsTable = New DataGridView()
         FlowLayoutPanel4 = New FlowLayoutPanel()
         Panel1 = New Panel()
-        Label9 = New Label()
+        AssignedAssetsNumber = New Label()
         Label5 = New Label()
         Panel2 = New Panel()
-        Label10 = New Label()
+        TotalAssetsNumber = New Label()
         Label11 = New Label()
         Panel3 = New Panel()
-        Label12 = New Label()
+        TotalUsersNumber = New Label()
         Label13 = New Label()
         DatabaseHelperBindingSource = New BindingSource(components)
-        AssignmentTable = New DataGridView()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(AssignmentTable, ComponentModel.ISupportInitialize).BeginInit()
         CType(DashboardUsersTable, ComponentModel.ISupportInitialize).BeginInit()
         CType(DashboardAssetsTable, ComponentModel.ISupportInitialize).BeginInit()
         FlowLayoutPanel4.SuspendLayout()
@@ -61,7 +62,6 @@ Partial Class Dashboard
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
         CType(DatabaseHelperBindingSource, ComponentModel.ISupportInitialize).BeginInit()
-        CType(AssignmentTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -206,6 +206,20 @@ Partial Class Dashboard
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
+        ' AssignmentTable
+        ' 
+        AssignmentTable.AllowUserToAddRows = False
+        AssignmentTable.AllowUserToDeleteRows = False
+        AssignmentTable.AllowUserToOrderColumns = True
+        AssignmentTable.BackgroundColor = Color.White
+        AssignmentTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        AssignmentTable.Location = New Point(19, 450)
+        AssignmentTable.Name = "AssignmentTable"
+        AssignmentTable.ReadOnly = True
+        AssignmentTable.RowHeadersWidth = 51
+        AssignmentTable.Size = New Size(399, 188)
+        AssignmentTable.TabIndex = 7
+        ' 
         ' DashboardUsersTable
         ' 
         DashboardUsersTable.AllowUserToAddRows = False
@@ -247,23 +261,23 @@ Partial Class Dashboard
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(128), CByte(131), CByte(255))
-        Panel1.Controls.Add(Label9)
+        Panel1.Controls.Add(AssignedAssetsNumber)
         Panel1.Controls.Add(Label5)
         Panel1.Location = New Point(3, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(181, 116)
+        Panel1.Size = New Size(204, 116)
         Panel1.TabIndex = 0
         ' 
-        ' Label9
+        ' AssignedAssetsNumber
         ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
-        Label9.ForeColor = Color.White
-        Label9.Location = New Point(1, 49)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(92, 54)
-        Label9.TabIndex = 6
-        Label9.Text = "129"
+        AssignedAssetsNumber.AutoSize = True
+        AssignedAssetsNumber.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
+        AssignedAssetsNumber.ForeColor = Color.White
+        AssignedAssetsNumber.Location = New Point(1, 49)
+        AssignedAssetsNumber.Name = "AssignedAssetsNumber"
+        AssignedAssetsNumber.Size = New Size(92, 54)
+        AssignedAssetsNumber.TabIndex = 6
+        AssignedAssetsNumber.Text = "129"
         ' 
         ' Label5
         ' 
@@ -272,30 +286,30 @@ Partial Class Dashboard
         Label5.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label5.Location = New Point(7, 17)
         Label5.Name = "Label5"
-        Label5.Size = New Size(158, 32)
+        Label5.Size = New Size(183, 32)
         Label5.TabIndex = 5
-        Label5.Text = "Active entries"
+        Label5.Text = "Assigned Assets"
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(0), CByte(139), CByte(105))
-        Panel2.Controls.Add(Label10)
+        Panel2.Controls.Add(TotalAssetsNumber)
         Panel2.Controls.Add(Label11)
-        Panel2.Location = New Point(190, 3)
+        Panel2.Location = New Point(213, 3)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(196, 116)
+        Panel2.Size = New Size(212, 116)
         Panel2.TabIndex = 1
         ' 
-        ' Label10
+        ' TotalAssetsNumber
         ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
-        Label10.ForeColor = Color.White
-        Label10.Location = New Point(1, 49)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(115, 54)
-        Label10.TabIndex = 6
-        Label10.Text = "1432"
+        TotalAssetsNumber.AutoSize = True
+        TotalAssetsNumber.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
+        TotalAssetsNumber.ForeColor = Color.White
+        TotalAssetsNumber.Location = New Point(1, 49)
+        TotalAssetsNumber.Name = "TotalAssetsNumber"
+        TotalAssetsNumber.Size = New Size(115, 54)
+        TotalAssetsNumber.TabIndex = 6
+        TotalAssetsNumber.Text = "1432"
         ' 
         ' Label11
         ' 
@@ -304,30 +318,30 @@ Partial Class Dashboard
         Label11.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label11.Location = New Point(7, 17)
         Label11.Name = "Label11"
-        Label11.Size = New Size(144, 32)
+        Label11.Size = New Size(138, 32)
         Label11.TabIndex = 5
-        Label11.Text = "Total entries"
+        Label11.Text = "Total Assets"
         ' 
         ' Panel3
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(71), CByte(69), CByte(84))
-        Panel3.Controls.Add(Label12)
+        Panel3.Controls.Add(TotalUsersNumber)
         Panel3.Controls.Add(Label13)
-        Panel3.Location = New Point(392, 3)
+        Panel3.Location = New Point(431, 3)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(214, 116)
         Panel3.TabIndex = 7
         ' 
-        ' Label12
+        ' TotalUsersNumber
         ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
-        Label12.ForeColor = Color.White
-        Label12.Location = New Point(1, 49)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(69, 54)
-        Label12.TabIndex = 6
-        Label12.Text = "25"
+        TotalUsersNumber.AutoSize = True
+        TotalUsersNumber.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
+        TotalUsersNumber.ForeColor = Color.White
+        TotalUsersNumber.Location = New Point(1, 49)
+        TotalUsersNumber.Name = "TotalUsersNumber"
+        TotalUsersNumber.Size = New Size(69, 54)
+        TotalUsersNumber.TabIndex = 6
+        TotalUsersNumber.Text = "25"
         ' 
         ' Label13
         ' 
@@ -336,27 +350,13 @@ Partial Class Dashboard
         Label13.ForeColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
         Label13.Location = New Point(7, 17)
         Label13.Name = "Label13"
-        Label13.Size = New Size(135, 32)
+        Label13.Size = New Size(129, 32)
         Label13.TabIndex = 5
-        Label13.Text = "Total assets"
+        Label13.Text = "Total Users"
         ' 
         ' DatabaseHelperBindingSource
         ' 
         DatabaseHelperBindingSource.DataSource = GetType(DatabaseHelper)
-        ' 
-        ' AssignmentTable
-        ' 
-        AssignmentTable.AllowUserToAddRows = False
-        AssignmentTable.AllowUserToDeleteRows = False
-        AssignmentTable.AllowUserToOrderColumns = True
-        AssignmentTable.BackgroundColor = Color.White
-        AssignmentTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        AssignmentTable.Location = New Point(19, 450)
-        AssignmentTable.Name = "AssignmentTable"
-        AssignmentTable.ReadOnly = True
-        AssignmentTable.RowHeadersWidth = 51
-        AssignmentTable.Size = New Size(399, 188)
-        AssignmentTable.TabIndex = 7
         ' 
         ' Dashboard
         ' 
@@ -372,6 +372,7 @@ Partial Class Dashboard
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(AssignmentTable, ComponentModel.ISupportInitialize).EndInit()
         CType(DashboardUsersTable, ComponentModel.ISupportInitialize).EndInit()
         CType(DashboardAssetsTable, ComponentModel.ISupportInitialize).EndInit()
         FlowLayoutPanel4.ResumeLayout(False)
@@ -382,7 +383,6 @@ Partial Class Dashboard
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         CType(DatabaseHelperBindingSource, ComponentModel.ISupportInitialize).EndInit()
-        CType(AssignmentTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -398,12 +398,12 @@ Partial Class Dashboard
     Friend WithEvents FlowLayoutPanel4 As FlowLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents AssignedAssetsNumber As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label10 As Label
+    Friend WithEvents TotalAssetsNumber As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label12 As Label
+    Friend WithEvents TotalUsersNumber As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents RegisterUserButton As Button
     Friend WithEvents DashboardAssetsTable As DataGridView

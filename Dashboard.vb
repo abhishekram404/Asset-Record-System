@@ -11,9 +11,28 @@
             PopulateAssetsTable()
             PopulateUsersTable()
             PopulateAssignmentsTable()
+            LoadDashboardCardsData()
         End If
 
     End Sub
+
+    Public Sub LoadDashboardCardsData()
+        Dim usersCount As Integer = GetTotalCountFromTable("Users")
+        Dim assetsCount As Integer = GetTotalCountFromTable("Assets")
+        Dim assignmentCount As Integer = GetTotalCountFromTable("AssetUserAssignment")
+
+        TotalUsersNumber.Text = usersCount
+        TotalAssetsNumber.Text = assetsCount
+        AssignedAssetsNumber.Text = assignmentCount
+    End Sub
+
+    Public Function GetTotalCountFromTable(ByVal tableName As String) As Integer
+        Dim query As String = $"SELECT count(*) from {tableName}"
+
+        Dim total As DataTable = DatabaseHelper.ExecuteQuery(query)
+        Dim count As Integer = Convert.ToInt32(total.Rows(0)(0))
+        Return count
+    End Function
 
     Public Sub PopulateAssetsTable()
         Dim query As String = "select * from Assets"

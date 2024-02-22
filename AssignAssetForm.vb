@@ -25,6 +25,7 @@
         DatabaseHelper.InsertData(query)
 
         Dashboard.PopulateAssignmentsTable()
+        Dashboard.LoadDashboardCardsData()
 
         Me.Hide()
 
@@ -57,8 +58,8 @@
             Next
         End If
     End Sub
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+        Me.Hide()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click

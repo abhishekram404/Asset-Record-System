@@ -23,7 +23,7 @@ Partial Class AssignAssetForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Button1 = New Button()
+        CancelButton = New Button()
         AssignButton = New Button()
         Panel6 = New Panel()
         NotesField = New RichTextBox()
@@ -53,7 +53,7 @@ Partial Class AssignAssetForm
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(CancelButton)
         Panel1.Controls.Add(AssignButton)
         Panel1.Controls.Add(Panel6)
         Panel1.Controls.Add(Panel5)
@@ -67,17 +67,17 @@ Partial Class AssignAssetForm
         Panel1.Size = New Size(699, 455)
         Panel1.TabIndex = 0
         ' 
-        ' Button1
+        ' CancelButton
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
-        Button1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.Black
-        Button1.Location = New Point(366, 374)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(135, 56)
-        Button1.TabIndex = 10
-        Button1.Text = "Cancel"
-        Button1.UseVisualStyleBackColor = False
+        CancelButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        CancelButton.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CancelButton.ForeColor = Color.Black
+        CancelButton.Location = New Point(366, 374)
+        CancelButton.Name = "CancelButton"
+        CancelButton.Size = New Size(135, 56)
+        CancelButton.TabIndex = 10
+        CancelButton.Text = "Cancel"
+        CancelButton.UseVisualStyleBackColor = False
         ' 
         ' AssignButton
         ' 
@@ -291,6 +291,6 @@ Partial Class AssignAssetForm
     Friend WithEvents Panel6 As Panel
     Friend WithEvents NotesField As RichTextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents CancelButton As Button
     Friend WithEvents AssignButton As Button
 End Class
