@@ -49,6 +49,8 @@ Partial Class Dashboard
         TotalUsersNumber = New Label()
         Label13 = New Label()
         DatabaseHelperBindingSource = New BindingSource(components)
+        EditUserButton = New Button()
+        DeleteUserButton = New Button()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
@@ -85,6 +87,8 @@ Partial Class Dashboard
         ' 
         ' SplitContainer1.Panel2
         ' 
+        SplitContainer1.Panel2.Controls.Add(DeleteUserButton)
+        SplitContainer1.Panel2.Controls.Add(EditUserButton)
         SplitContainer1.Panel2.Controls.Add(AssignmentTable)
         SplitContainer1.Panel2.Controls.Add(DashboardUsersTable)
         SplitContainer1.Panel2.Controls.Add(DashboardAssetsTable)
@@ -358,6 +362,29 @@ Partial Class Dashboard
         ' 
         DatabaseHelperBindingSource.DataSource = GetType(DatabaseHelper)
         ' 
+        ' EditUserButton
+        ' 
+        EditUserButton.BackColor = Color.FromArgb(CByte(227), CByte(224), CByte(243))
+        EditUserButton.Font = New Font("Segoe UI", 12F)
+        EditUserButton.Location = New Point(19, 719)
+        EditUserButton.Name = "EditUserButton"
+        EditUserButton.Size = New Size(145, 49)
+        EditUserButton.TabIndex = 8
+        EditUserButton.Text = "Edit user"
+        EditUserButton.UseVisualStyleBackColor = False
+        ' 
+        ' DeleteUserButton
+        ' 
+        DeleteUserButton.BackColor = Color.Red
+        DeleteUserButton.Font = New Font("Segoe UI", 12F)
+        DeleteUserButton.ForeColor = Color.White
+        DeleteUserButton.Location = New Point(170, 719)
+        DeleteUserButton.Name = "DeleteUserButton"
+        DeleteUserButton.Size = New Size(145, 49)
+        DeleteUserButton.TabIndex = 9
+        DeleteUserButton.Text = "Delete user"
+        DeleteUserButton.UseVisualStyleBackColor = False
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -411,4 +438,6 @@ Partial Class Dashboard
     Friend WithEvents Label4 As Label
     Friend WithEvents DatabaseHelperBindingSource As BindingSource
     Friend WithEvents AssignmentTable As DataGridView
+    Friend WithEvents DeleteUserButton As Button
+    Friend WithEvents EditUserButton As Button
 End Class

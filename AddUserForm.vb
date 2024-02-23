@@ -11,6 +11,7 @@
 
         DatabaseHelper.InsertData(query)
         Dashboard.PopulateUsersTable()
+        Dashboard.LoadDashboardCardsData()
 
         Me.Close()
 

@@ -84,4 +84,14 @@
     Private Sub RegisterUserButton_Click(sender As Object, e As EventArgs) Handles RegisterUserButton.Click
         AddUserForm.Show()
     End Sub
+
+    Private Sub DeleteUserButton_Click(sender As Object, e As EventArgs) Handles DeleteUserButton.Click
+        DeleteUserForm.Show()
+    End Sub
+
+    Private Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
+        LocalSession.username = Nothing
+        Me.Close()
+        LoginForm.Show()
+    End Sub
 End Class

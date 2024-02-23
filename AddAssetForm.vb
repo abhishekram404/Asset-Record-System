@@ -15,6 +15,7 @@ Public Class AddAssetForm
             DatabaseHelper.InsertData(query)
 
             Dashboard.PopulateAssetsTable()
+            Dashboard.LoadDashboardCardsData()
             ClearForm()
             Me.Close()
 

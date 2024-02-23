@@ -111,6 +111,7 @@ Partial Class LoginForm
         PasswordField.PlaceholderText = "Password"
         PasswordField.Size = New Size(266, 32)
         PasswordField.TabIndex = 5
+        PasswordField.UseSystemPasswordChar = True
         ' 
         ' Panel4
         ' 
