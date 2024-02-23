@@ -89,6 +89,10 @@
         DeleteUserForm.Show()
     End Sub
 
+    Private Sub EditUserButton_Click(sender As Object, e As EventArgs) Handles EditUserButton.Click
+        UpdateUserForm.Show()
+    End Sub
+
     Private Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
         LocalSession.username = Nothing
         Me.Close()
